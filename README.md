@@ -7,6 +7,7 @@ Breadth-first search
 The purpose of this assignment is to get you comfortable working with graph structures and to implement a breadth-first search function to traverse the graph and find the shortest path between nodes.
 
 # Method Description
+## Functions
 The BFS function performs a breadth first search.
 
 BFS first checks to make sure that if a node is provided, that it exists in the graph through the check_node function. If the node does not exist in the graph, then a value error is raised.
@@ -17,8 +18,23 @@ The output of BFS depends on if an end node is provided or not.
 * Otherwise, create a dictionary linking each frontier node with the parent node that it comes from. Then create a list of nodes that link the starting node to the end node
 2) If no end node is specified, returns a list with all traversed nodes in the order that they were traversed
 
+## Testing
+test_bfs:
+Using the citation_network.adjlist and a given starting node (Luke Gilbert), test output when:
+* End node is present in the network and is connected to Luke (Martin Kampmann)
+	* Ouptut is a list ['Luke Gilbert', '33483487', 'Martin Kampmann'] which are starting node, connecting node, ending node, repsectively
+* End node is present in the network but is not connected to Luke (Reza Abbasi-Asl)
+	* Output is None
+* End node is present in the network and is Luke (Luke Gilbert)
+	* Output is a list containing just Luke
 
+test_checkNode:
+Ensures that the start or end node that is provided exists in the network.
+* Given a proper node name, no action taken, output is None
+* Given an improper node name, an exception is raised, yielding a bad test result
 
+test_bfs_traversal:
+Given the tiny_network.adjlist, get all nodes that it traverses and in the order it traverses. Assert that the fifth node is Martin Kampmann
 
 
 # Assignment Tasks
