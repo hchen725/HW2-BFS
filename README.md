@@ -1,12 +1,18 @@
 ![](https://github.com/user-name/repo-name/workflows/project2/badge.svg)
+! [BuildStatus] (https://github.com/hchen725/HW2-BFS/workflows/HW2-BFS/badge.svg?event=push)
 # Assignment 2
 Breadth-first search
 
 # Assignment Overview
 The purpose of this assignment is to get you comfortable working with graph structures and to implement a breadth-first search function to traverse the graph and find the shortest path between nodes.
 
-# Functions
-
+# Method Description
+The BFS function performs a breadth first search.
+The output of BFS depends on if an end node is provided or not.
+1) If no end node is specified:
+Returns a list with all traversed nodes in the order that they were traversed
+2) If an end node is specified:
+Returns a list of nodes in the order that they were traversed from the starting node to the end node. 
 
 
 # Assignment Tasks
