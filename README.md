@@ -1,5 +1,5 @@
-![](https://github.com/user-name/repo-name/workflows/project2/badge.svg)
-! [BuildStatus] (https://github.com/hchen725/HW2-BFS/workflows/HW2-BFS/badge.svg?event=push)
+![BuildStatus](https://github.com/hchen725/HW2-BFS/actions/workflows/test.yml/badge.svg)
+
 # Assignment 2
 Breadth-first search
 
@@ -8,11 +8,17 @@ The purpose of this assignment is to get you comfortable working with graph stru
 
 # Method Description
 The BFS function performs a breadth first search.
+
+BFS first checks to make sure that if a node is provided, that it exists in the graph through the check_node function. If the node does not exist in the graph, then a value error is raised.
+
 The output of BFS depends on if an end node is provided or not.
-1) If no end node is specified:
-Returns a list with all traversed nodes in the order that they were traversed
-2) If an end node is specified:
-Returns a list of nodes in the order that they were traversed from the starting node to the end node. 
+1) If an end node is specified, returns a list of nodes in the order that they were traversed from the starting node to the end node. 
+* If the end node is the same as the start node, return a list of that node
+* Otherwise, create a dictionary linking each frontier node with the parent node that it comes from. Then create a list of nodes that link the starting node to the end node
+2) If no end node is specified, returns a list with all traversed nodes in the order that they were traversed
+
+
+
 
 
 # Assignment Tasks
