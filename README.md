@@ -1,8 +1,13 @@
+![](https://github.com/user-name/repo-name/workflows/project2/badge.svg)
 # Assignment 2
 Breadth-first search
 
 # Assignment Overview
 The purpose of this assignment is to get you comfortable working with graph structures and to implement a breadth-first search function to traverse the graph and find the shortest path between nodes.
+
+# Functions
+
+
 
 # Assignment Tasks
 
