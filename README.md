@@ -10,7 +10,7 @@ The purpose of this assignment is to get you comfortable working with graph stru
 ## Functions
 The BFS function performs a breadth first search.
 
-BFS first checks to make sure that if a node is provided, that it exists in the graph through the check_node function. If the node does not exist in the graph, then a value error is raised.
+BFS first performs a series of graph checks. It first makes sure that the graph provided is not empty, then it checks to make sure the nodes are proper. If a node is provided, that it exists in the graph through the check_node function. If the node does not exist in the graph, then a value error is raised.
 
 The output of BFS depends on if an end node is provided or not.
 1) If an end node is specified, returns a list of nodes in the order that they were traversed from the starting node to the end node. 
@@ -35,6 +35,12 @@ Ensures that the start or end node that is provided exists in the network.
 
 test_bfs_traversal:
 Given the tiny_network.adjlist, get all nodes that it traverses and in the order it traverses. Assert that the fifth node is Martin Kampmann
+
+test_empty_network:
+Ensure that the network provided is not empty.
+* Given an empty network, raise an exception, yielding a bad result
+* Given a non-empty network, no action taken, output is none
+
 
 
 # Assignment Tasks

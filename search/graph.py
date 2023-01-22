@@ -13,6 +13,10 @@ class Graph:
         self.filename = filename
         self.graph = nx.read_adjlist(filename, create_using=nx.DiGraph, delimiter=";")
 
+    def check_empty_graph(self):
+        if len(self.graph.nodes()) == 0:
+            raise ValueError("Graph is empty")
+
     def check_node(self, node):
         """
         Check to make sure the node exists in the graph
@@ -105,6 +109,8 @@ class Graph:
         * If there is an end node input and a path does not exist, return None
 
         """
+        # Make sure the graph is not empty
+        self.check_empty_graph()
         # Make sure that the start and end nodes exist in graph
         self.check_node(start)
         self.check_node(end)

@@ -67,3 +67,22 @@ def test_bfs_traversal():
     traversal_output = g.bfs(start = start_node)
      
     assert(traversal_output[5] == "Martin Kampmann")
+
+def test_empty_network():
+    empty_network = 'test/empty_network.adjlist'
+    g_empty = graph.Graph(empty_network)
+
+    try: 
+        empty_check = g_empty.check_empty_graph()
+    except:
+        empty_check = False
+
+    test_network = 'data/tiny_network.adjlist'
+    g_test = graph.Graph(test_network)
+
+    try:
+        test_check = g_test.check_empty_graph()
+    except:
+        test_check = False
+
+    assert ((test_check == None) and (empty_check == False))
